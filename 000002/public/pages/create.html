@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer votre site — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="editor-body">
+    <header class="editor-topbar">
+        <a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <div class="project-name"><span class="status-dot"></span><span id="projectTitle">Mon nouveau site</span><button
+                class="icon-button" id="renameProject" aria-label="Renommer le projet">✎</button></div>
+        <div class="editor-actions"><button class="text-button" id="undoButton">↶ Annuler</button><button
+                class="text-button" id="redoButton">↷ Rétablir</button><button class="button button-light"
+                id="previewButton">◉ Prévisualiser</button><button class="button button-dark" id="publishButton" data-publish-subscription>Publier
+                <span>↗</span></button></div>
+    </header>
+    <main class="editor-layout">
+        <aside class="sidebar sidebar-left" aria-label="Bibliothèque de modules">
+            <div class="panel-heading">
+                <div><span class="panel-kicker">Construire</span>
+                    <h1>Ajouter un module</h1>
+                </div><button class="icon-button" id="closeLibrary" aria-label="Fermer la bibliothèque">×</button>
+            </div>
+            <p class="panel-intro">Glissez une section dans votre page, puis personnalisez chaque détail.</p>
+            <div class="search-box"><span>⌕</span><input id="moduleSearch" type="search"
+                    placeholder="Rechercher un module"></div>
+            <div class="module-tabs"><button class="module-tab active" data-category="all">Tout</button><button
+                    class="module-tab" data-category="base">Essentiel</button><button class="module-tab"
+                    data-category="media">Média</button><button class="module-tab"
+                    data-category="conversion">Vente</button></div>
+            <div class="module-list" id="moduleList">
+                <button class="module-card" data-category="base" data-module="hero"><span
+                        class="module-icon icon-spark">✦</span><span><b>Hero</b><small>Un titre qui
+                            accroche</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="base" data-module="about"><span
+                        class="module-icon icon-circle">◌</span><span><b>À propos</b><small>Votre histoire en quelques
+                            mots</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="media" data-module="gallery"><span
+                        class="module-icon icon-grid">▦</span><span><b>Galerie</b><small>Présentez vos
+                            projets</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="media" data-module="video"><span
+                        class="module-icon icon-play">▶</span><span><b>Vidéo</b><small>Une image en
+                            mouvement</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="conversion" data-module="features"><span
+                        class="module-icon icon-lines">☷</span><span><b>Points forts</b><small>Trois raisons de vous
+                            choisir</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="conversion" data-module="pricing"><span
+                        class="module-icon icon-tag">◇</span><span><b>Tarifs</b><small>Une offre facile à
+                            comprendre</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="base" data-module="testimonials"><span
+                        class="module-icon icon-quote">“</span><span><b>Témoignages</b><small>La preuve par vos
+                            clients</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="base" data-module="contact"><span
+                        class="module-icon icon-mail">@</span><span><b>Contact</b><small>Un formulaire sans
+                            friction</small></span><span class="add-symbol">+</span></button>
+                <button class="module-card" data-category="conversion" data-module="newsletter"><span
+                        class="module-icon icon-arrow">→</span><span><b>Newsletter</b><small>Faites grandir votre
+                            communauté</small></span><span class="add-symbol">+</span></button>
+            </div>
+            <button class="add-custom"><span>+</span> Créer un module personnalisé</button>
+        </aside>
+        <section class="workspace">
+            <div class="canvas-toolbar">
+                <div class="device-switcher"><button class="device active" data-device="desktop"
+                        aria-label="Vue bureau">▱</button><button class="device" data-device="tablet"
+                        aria-label="Vue tablette">▯</button><button class="device" data-device="mobile"
+                        aria-label="Vue mobile">▯</button></div><span class="canvas-label">Accueil <b>•</b> Non
+                    publié</span>
+                <div class="canvas-tools"><button class="icon-button" id="zoomOut"
+                        aria-label="Zoom arrière">−</button><span id="zoomValue">100%</span><button class="icon-button"
+                        id="zoomIn" aria-label="Zoom avant">+</button><button class="icon-button" id="toggleGrid"
+                        aria-label="Afficher la grille">⌗</button></div>
+            </div>
+            <div class="canvas-area" id="canvasArea">
+                <div class="site-canvas" id="siteCanvas">
+                    <div class="canvas-site-header"><strong>atelier.</strong>
+                        <nav><span>Projets</span><span>À propos</span><span>Contact</span></nav><button>Menu</button>
+                    </div>
+                    <section class="canvas-hero editable-block" data-block="hero">
+                        <div><span class="canvas-eyebrow">Studio créatif indépendant</span>
+                            <h2>Des idées qui<br><em>prennent forme.</em></h2>
+                            <p>Nous donnons une direction claire aux projets qui comptent.</p><button
+                                class="canvas-cta">Découvrir le studio <span>↗</span></button>
+                        </div>
+                        <div class="hero-shape"><span>✳</span></div>
+                    </section>
+                    <section class="canvas-about editable-block" data-block="about"><span class="section-number">01 —
+                            L'atelier</span>
+                        <div>
+                            <h3>Créer avec intention,<br>sans faire de bruit.</h3>
+                            <p>Nous construisons des identités et des expériences digitales qui restent en tête pour les
+                                bonnes raisons.</p>
+                        </div>
+                    </section>
+                    <section class="canvas-projects editable-block" data-block="gallery">
+                        <div class="project-heading"><span class="section-number">02 — Sélection</span><a href="#">Voir
+                                tous les projets ↗</a></div>
+                        <div class="project-grid">
+                            <div class="project-image image-one"><b>Casa Noma</b><small>Identité & espace</small></div>
+                            <div class="project-image image-two"><b>Forme libre</b><small>Direction artistique</small>
+                            </div>
+                            <div class="project-image image-three"><b>Épure</b><small>Digital & stratégie</small></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar sidebar-right" aria-label="Réglages du site">
+            <div class="settings-heading">
+                <div><span class="panel-kicker">Personnaliser</span>
+                    <h2>Réglages</h2>
+                </div><button class="icon-button" id="closeSettings" aria-label="Fermer les réglages">×</button>
+            </div>
+            <div class="settings-tabs"><button class="settings-tab active" data-settings="design">Design</button><button
+                    class="settings-tab" data-settings="page">Page</button><button class="settings-tab"
+                    data-settings="seo">SEO</button></div>
+            <div class="settings-panel active" id="designPanel">
+                <div class="theme-library"><div class="theme-library-heading"><div><label>Bibliothèque de thèmes</label><small>100 directions · polices Google Fonts</small></div><span id="themeCount">100</span></div><div class="theme-search"><span>⌕</span><input id="themeSearch" type="search" placeholder="Rechercher un thème"></div><div class="theme-grid" id="themeGrid"></div></div>
+                <div class="setting-group"><label>Palette</label>
+                    <div class="palette-options"><button class="palette active" data-palette="sage"
+                            aria-label="Palette sauge"></button><button class="palette clay" data-palette="clay"
+                            aria-label="Palette argile"></button><button class="palette ink" data-palette="ink"
+                            aria-label="Palette encre"></button><button class="palette lemon" data-palette="lemon"
+                            aria-label="Palette citron"></button></div>
+                </div>
+                <div class="setting-group"><label>Typographie</label><select id="fontSelect">
+                        <option value="grotesk">Space Grotesk / DM Sans</option>
+                        <option value="serif">Fraunces / DM Sans</option>
+                        <option value="mono">IBM Plex Mono / DM Sans</option>
+                    </select></div>
+                <div class="setting-group"><label>Largeur du contenu <output id="widthOutput">1160
+                            px</output></label><input id="widthRange" type="range" min="900" max="1400" value="1160">
+                </div>
+                <div class="setting-group"><label>Rayon des éléments</label>
+                    <div class="segmented"><button class="radius-option active" data-radius="soft">Doux</button><button
+                            class="radius-option" data-radius="square">Net</button><button class="radius-option"
+                            data-radius="round">Rond</button></div>
+                </div>
+                <div class="setting-group"><label>Navigation</label><label class="switch-row"><span>Navigation
+                            fixe</span><input type="checkbox" checked><i></i></label><label
+                        class="switch-row"><span>Afficher le logo</span><input type="checkbox" checked><i></i></label>
+                </div>
+            </div>
+            <div class="settings-panel" id="pagePanel">
+                <div class="setting-group"><label>Nom de la page</label><input class="text-input" value="Accueil"></div>
+                <div class="setting-group"><label>URL de la page</label>
+                    <div class="url-input"><span>nova.site/</span><input value="accueil"></div>
+                </div>
+                <div class="setting-group"><label>Fond de page</label><input class="color-input" type="color"
+                        value="#f5f7f3"><span class="color-value">#F5F7F3</span></div>
+            </div>
+            <div class="settings-panel" id="seoPanel">
+                <div class="setting-group"><label>Titre SEO <output>0 / 60</output></label><input class="text-input"
+                        placeholder="Votre titre dans Google"></div>
+                <div class="setting-group"><label>Description <output>0 / 160</output></label><textarea rows="5"
+                        placeholder="Décrivez votre activité en une phrase..."></textarea></div>
+                <div class="seo-check"><span>✓</span> Votre page est prête à être trouvée</div>
+            </div>
+            <div class="help-card"><span>✦</span>
+                <div><b>Besoin d'inspiration ?</b>
+                    <p>Découvrez nos conseils pour rendre votre site plus singulier.</p><a href="#">Voir les conseils
+                        ↗</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <div class="preview-overlay" id="previewOverlay" aria-hidden="true">
+        <div class="preview-topbar"><strong>Prévisualisation</strong><span id="previewDeviceLabel">Bureau</span><div><button class="device preview-device active" data-preview-device="desktop">▱</button><button class="device preview-device" data-preview-device="tablet">▯</button><button class="device preview-device" data-preview-device="mobile">▯</button><button class="icon-button" id="closePreview" aria-label="Fermer la prévisualisation">×</button></div></div>
+        <div class="preview-stage"><div class="preview-frame" id="previewFrame"></div></div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+</body>
+
+</html>
+

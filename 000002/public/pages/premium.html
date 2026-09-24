@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Premium — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="app-page">
+    <header class="app-header shell"><a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <nav><a href="profile.html">Mon espace</a><a href="help.html">Aide</a></nav><a class="button button-dark"
+            href="create.html">Créer un site ↗</a>
+    </header>
+    <main class="shell pricing-page">
+        <div class="pricing-hero"><span class="eyebrow"><i></i> Passer à la vitesse supérieure</span>
+            <h1>Plus de liberté.<br><em>Plus d'impact.</em></h1>
+            <p>Des outils plus puissants pour donner à vos projets l'espace qu'ils méritent.</p>
+        </div>
+        <div class="pricing-grid">
+            <article class="price-card"><span>Starter</span>
+                <h2>0 €</h2>
+                <p>Pour lancer votre première idée.</p>
+                <ul>
+                    <li>1 site publié</li>
+                    <li>Modules essentiels</li>
+                    <li>Sous-domaine Nova</li>
+                </ul><a class="button button-light" href="create.html">Commencer</a>
+            </article>
+            <article class="price-card featured">
+                <div class="popular">Le plus choisi</div><span>Studio</span>
+                <h2>18 € <small>/ mois</small></h2>
+                <p>Pour créer sans compromis.</p>
+                <ul>
+                    <li>Sites illimités</li>
+                    <li>Domaines personnalisés</li>
+                    <li>Analytics avancées</li>
+                    <li>Collaboration à 3</li>
+                </ul><button class="button button-dark" data-stripe-checkout="studio">Choisir Studio ↗</button>
+            </article>
+            <article class="price-card"><span>Agency</span>
+                <h2>49 € <small>/ mois</small></h2>
+                <p>Pour les équipes qui avancent vite.</p>
+                <ul>
+                    <li>Tout Studio</li>
+                    <li>Collaboration illimitée</li>
+                    <li>Export de code</li>
+                    <li>Support prioritaire</li>
+                </ul><button class="button button-light" data-stripe-checkout="agency">Parler à l'équipe</button>
+            </article>
+        </div>
+    </main>
+    <div class="modal" id="planModal">
+        <div class="modal-card"><button class="modal-close" data-modal-close="#planModal">×</button>
+            <h2>Votre demande est notée</h2>
+            <p>Nous vous contacterons pour finaliser votre passage au plan choisi.</p><button class="button button-dark"
+                data-modal-close="#planModal">Parfait</button>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+

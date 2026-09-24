@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Paramètres — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="app-page">
+    <header class="app-header shell"><a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <nav><a href="profile.html">Mon espace</a><a href="help.html">Aide</a></nav><a class="button button-dark"
+            href="create.html">Créer un site ↗</a>
+    </header>
+    <main class="shell settings-page">
+        <div class="dashboard-heading">
+            <div><span class="panel-kicker">Votre espace</span>
+                <h1>Paramètres</h1>
+                <p>Tout ce qui concerne votre compte, au même endroit.</p>
+            </div>
+        </div>
+        <div class="settings-layout">
+            <aside class="settings-menu" data-tabs><button class="active" data-tab="accountPanel">Compte</button><button
+                    data-tab="notificationsPanel">Notifications</button><button
+                    data-tab="billingPanel">Facturation</button><button data-tab="securityPanel">Sécurité</button>
+            </aside>
+            <section class="surface settings-content">
+                <div class="settings-view active" id="accountPanel">
+                    <h2>Informations personnelles</h2>
+                    <p class="muted">Ces informations sont visibles uniquement par vous.</p>
+                    <div class="avatar-line">
+                        <div class="avatar">CM</div><button class="button button-light">Changer la photo</button>
+                    </div>
+                    <form data-feedback="Vos informations ont été enregistrées.">
+                        <div class="form-grid"><label>Prénom<input value="Camille"></label><label>Nom<input
+                                    value="Martin"></label></div><label>Email<input type="email"
+                                value="camille@exemple.fr"></label><button class="button button-dark"
+                            type="submit">Enregistrer les changements</button>
+                    </form>
+                </div>
+                <div class="settings-view" id="notificationsPanel">
+                    <h2>Vos notifications</h2>
+                    <p class="muted">Choisissez ce qui mérite votre attention.</p><label
+                        class="setting-toggle"><span><b>Actualités de Nova</b><small>Nouveaux modèles et
+                                fonctionnalités</small></span><input type="checkbox" checked><i></i></label><label
+                        class="setting-toggle"><span><b>Activité des projets</b><small>Visites, commentaires et
+                                collaborations</small></span><input type="checkbox" checked><i></i></label><label
+                        class="setting-toggle"><span><b>Conseils personnalisés</b><small>Une idée utile de temps en
+                                temps</small></span><input type="checkbox"><i></i></label>
+                </div>
+                <div class="settings-view" id="billingPanel">
+                    <h2>Votre abonnement</h2>
+                    <div class="plan-box">
+                        <div><span>Plan Studio</span><strong>18 € <small>/ mois</small></strong></div><span
+                            class="plan-status">Actif</span>
+                    </div><button class="button button-light" data-stripe-portal>Gérer l'abonnement</button>
+                </div>
+                <div class="settings-view" id="securityPanel">
+                    <h2>Sécurité</h2>
+                    <p class="muted">Dernière connexion : aujourd'hui à 09:42.</p><button class="button button-light"
+                        data-modal-open="#sessionsModal">Voir les sessions actives</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="modal" id="cancelModal">
+        <div class="modal-card"><button class="modal-close" data-modal-close="#cancelModal">×</button>
+            <h2>Gérer votre plan</h2>
+            <p>Votre abonnement Studio reste actif jusqu'à la prochaine échéance.</p><button class="button button-dark"
+                data-modal-close="#cancelModal">Garder mon abonnement</button>
+        </div>
+    </div>
+    <div class="modal" id="sessionsModal">
+        <div class="modal-card"><button class="modal-close" data-modal-close="#sessionsModal">×</button>
+            <h2>Sessions actives</h2>
+            <p>Windows · Paris · Il y a 4 minutes</p>
+            <p>iPhone · Paris · Il y a 2 jours</p><button class="button button-light"
+                data-modal-close="#sessionsModal">Fermer</button>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+

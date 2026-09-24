@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon espace — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="app-page">
+    <header class="app-header shell"><a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <nav><a href="create.html">Créer</a><a href="settings.html">Paramètres</a><a href="help.html">Aide</a></nav><a
+            class="button button-dark" href="create.html?project=new">Nouveau projet +</a>
+    </header>
+    <main class="shell dashboard">
+        <div class="dashboard-heading">
+            <div><span class="panel-kicker">Votre espace</span>
+                <h1>Bonjour, Camille.</h1>
+                <p>Voici ce qui se passe dans vos projets.</p>
+            </div><button class="button button-light" data-modal-open="#inviteModal">Inviter un collaborateur</button>
+        </div>
+        <div class="stats-row">
+            <div><span>Projets actifs</span><strong>03</strong></div>
+            <div><span>Visites ce mois</span><strong>1 248</strong><small>+18% ↗</small></div>
+            <div><span>Plan actuel</span><strong>Studio</strong><small>Renouvellement dans 12 jours</small></div>
+        </div>
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Vos projets</h2>
+                <div class="project-filters"><button class="active" data-tab="all">Tous</button><button
+                        data-tab="draft">Brouillons</button><button data-tab="published">Publiés</button></div>
+            </div>
+            <div class="project-cards">
+                <article class="project-card" data-project-status="published">
+                    <div class="project-thumb thumb-sage"><button data-favorite>♡</button><span>Publié</span></div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Maison Lune</h3>
+                            <p>Dernière modification il y a 2 h</p>
+                        </div><a href="create.html">Ouvrir ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project-status="draft">
+                    <div class="project-thumb thumb-clay"><button data-favorite>♡</button><span>Brouillon</span></div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Portfolio personnel</h3>
+                            <p>Dernière modification hier</p>
+                        </div><a href="create.html?project=portfolio">Continuer ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-project-status="published">
+                    <div class="project-thumb thumb-ink"><button data-favorite>♡</button><span>Publié</span></div>
+                    <div class="project-meta">
+                        <div>
+                            <h3>Studio N°7</h3>
+                            <p>Dernière modification lundi</p>
+                        </div><a href="create.html">Ouvrir ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="inviteModal">
+        <div class="modal-card"><button class="modal-close" data-modal-close="#inviteModal">×</button>
+            <h2>Inviter quelqu'un</h2>
+            <p>Partagez votre projet avec une personne de confiance.</p>
+            <form data-feedback="Invitation envoyée."><input type="email" placeholder="email@exemple.fr"
+                    required><button class="button button-dark full" type="submit">Envoyer l'invitation</button></form>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+

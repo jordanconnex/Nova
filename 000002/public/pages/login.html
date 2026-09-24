@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Connexion — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="account-page">
+    <main class="account-card"><a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <div class="account-intro"><span class="panel-kicker">Bon retour</span>
+            <h1>Retrouvez votre espace.</h1>
+            <p>Continuez là où vous vous êtes arrêté.</p>
+        </div>
+        <form data-feedback="Connexion réussie. Bienvenue dans Nova."><label>Email<input type="email"
+                    placeholder="vous@exemple.fr" required></label><label>Mot de passe<div class="password-field"><input
+                        id="loginPassword" type="password" placeholder="••••••••" required><button type="button"
+                        data-password-toggle="#loginPassword">Afficher</button></div></label>
+            <div class="form-line"><label class="check"><input type="checkbox"> Se souvenir de moi</label><a
+                    href="help.html#password">Mot de passe oublié ?</a></div><button class="button button-dark full"
+                type="submit">Se connecter <span>↗</span></button>
+        </form>
+        <div class="divider"><span>ou</span></div><button class="social-button" type="button"
+            data-modal-open="#comingSoon">◉ Continuer avec Google</button>
+        <p class="account-foot">Nouveau sur Nova ? <a href="register.html">Créer un compte</a></p>
+    </main>
+    <div class="modal" id="comingSoon">
+        <div class="modal-card"><button class="modal-close" data-modal-close="#comingSoon">×</button>
+            <h2>Bientôt disponible</h2>
+            <p>La connexion sociale arrive prochainement. Utilisez votre email pour le moment.</p><button
+                class="button button-dark" data-modal-close="#comingSoon">Compris</button>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+

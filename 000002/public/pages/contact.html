@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="app-page">
+    <header class="app-header shell"><a class="brand" href="../index.html"><span class="brand-mark">N</span> nova</a>
+        <nav><a href="create.html">Créer</a><a href="help.html">Aide</a><a href="profile.html">Mon espace</a></nav><a
+            class="button button-dark" href="create.html">Créer un site ↗</a>
+    </header>
+    <main class="shell narrow-page"><span class="eyebrow"><i></i> Nous écrire</span>
+        <h1>Parlons de votre<br><em>prochaine idée.</em></h1>
+        <div class="contact-grid">
+            <form class="surface form-large" data-feedback="Message envoyé. Nous revenons vers vous rapidement.">
+                <label>Votre nom<input required placeholder="Comment devons-nous vous appeler ?"></label><label>Votre
+                    email<input type="email" required placeholder="vous@exemple.fr"></label><label>Sujet<select>
+                        <option>Question générale</option>
+                        <option>Problème technique</option>
+                        <option>Partenariat</option>
+                        <option>Autre demande</option>
+                    </select></label><label>Votre message<textarea rows="6" required
+                        placeholder="Dites-nous tout..."></textarea></label><button class="button button-dark"
+                    type="submit">Envoyer le message ↗</button></form>
+            <aside class="contact-aside">
+                <div class="contact-detail"><span>01</span>
+                    <h3>Une question ?</h3>
+                    <p>Notre équipe répond du lundi au vendredi, généralement dans la journée.</p><a
+                        href="mailto:bonjour@nova.studio">bonjour@nova.studio</a>
+                </div>
+                <div class="contact-detail"><span>02</span>
+                    <h3>Un projet en tête ?</h3>
+                    <p>Décrivez votre besoin, même si tout n'est pas encore parfaitement clair.</p><a
+                        href="create.html">Ouvrir l'éditeur ↗</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+

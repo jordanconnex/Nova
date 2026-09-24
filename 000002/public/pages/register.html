@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Inscription — Nova</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/main.js" defer></script>
+</head>
+
+<body class="account-page">
+    <main class="account-card account-card-wide"><a class="brand" href="../index.html"><span class="brand-mark">N</span>
+            nova</a>
+        <div class="account-intro"><span class="panel-kicker">Commencer</span>
+            <h1>Votre prochain chapitre commence ici.</h1>
+            <p>Un espace calme pour construire quelque chose de remarquable.</p>
+        </div>
+        <form data-feedback="Votre compte a été créé. Bienvenue dans Nova.">
+            <div class="form-grid"><label>Prénom<input type="text" placeholder="Camille"
+                        required></label><label>Nom<input type="text" placeholder="Martin" required></label></div>
+            <label>Email<input type="email" placeholder="vous@exemple.fr" required></label><label>Mot de passe<div
+                    class="password-field"><input id="registerPassword" type="password" minlength="8"
+                        placeholder="8 caractères minimum" required><button type="button"
+                        data-password-toggle="#registerPassword">Afficher</button></div></label><label
+                class="check"><input type="checkbox" required> J'accepte les conditions d'utilisation et la politique de
+                confidentialité.</label><button class="button button-dark full" type="submit">Créer mon espace
+                <span>↗</span></button>
+        </form>
+        <p class="account-foot">Vous avez déjà un compte ? <a href="login.html">Se connecter</a></p>
+    </main>
+    <div class="toast" id="toast"></div>
+</body>
+
+</html>
+
